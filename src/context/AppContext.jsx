@@ -15,9 +15,11 @@ function AppContextProvider({ children }) {
   async function fetchBlogPosts(page = 1, tag = null, category) {
     setLoading(true);
     let url = `${baseURL}?page=${page}`;
+    // process.env.
     if (tag) {
       url += `&tag=${tag}`;
     }
+
     if (category) {
       url += `&category=${category}`;
     }
@@ -28,6 +30,7 @@ function AppContextProvider({ children }) {
       if (!data.posts || data.posts.length === 0)
         throw new Error("Something went wrong");
       console.log("Api Response", data);
+
       setPage(data.page);
       setPosts(data.posts);
       setTotalPages(data.totalPages);
