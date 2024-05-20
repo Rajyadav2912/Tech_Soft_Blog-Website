@@ -14,8 +14,9 @@ function AppContextProvider({ children }) {
 
   async function fetchBlogPosts(page = 1, tag = null, category) {
     setLoading(true);
-    let url = `${baseURL}?page=${page}`;
+    let url = `${baseURL}get-blogs?page=${page}`;
     // process.env.
+    
     if (tag) {
       url += `&tag=${tag}`;
     }

@@ -12,16 +12,16 @@ const Card = ({ id, title, author, date, category, content, tags, img }) => {
         <div>
           <p className="font-bold text-lg cursor-pointer">{title}</p>
           <p className="text-md">
-          📝  By <span className="italic mt-[4px]">{author}</span> on
+            📝 By <span className="italic mt-[4px]">{author}</span> on
             <span> {category}</span>
           </p>
           <p className="text-md mt-[4px]">
-           📅  <strong>Posted on</strong> {date}
+            📅 <strong>Posted on</strong> {date}
           </p>
         </div>
       </div>
 
-      <p className="text-[15px] mt-[14px]">{content}</p>
+      <p className="text-[15px] mt-[14px] text-justify">{content}</p>
 
       <div className="flex gap-x-2">
         {tags.map((tag, index) => {

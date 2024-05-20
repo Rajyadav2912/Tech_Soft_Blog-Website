@@ -9,7 +9,7 @@ const Pagination = () => {
         <div className="flex gap-x-2">
           {page > 1 && (
             <button
-              className="rounded-md border shadow-lg px-4 py-1"
+              className="rounded-md border border-black shadow-lg shadow-gray-400  px-4 py-1"
               onClick={() => handlePageChange(page - 1)}
             >
               Previous
@@ -17,7 +17,7 @@ const Pagination = () => {
           )}
           {page < totalPages && (
             <button
-              className="rounded-md border shadow-lg px-4 py-1"
+              className="rounded-md border border-black shadow-lg shadow-gray-400 px-4 py-1"
               onClick={() => handlePageChange(page + 1)}
             >
               Next
