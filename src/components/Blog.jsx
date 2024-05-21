@@ -19,7 +19,10 @@ const Blog = () => {
       ) : (
         posts.map((post) => {
           return (
-            <div className="max-w-[670px] rounded-lg border border-black">
+            <div
+              className="max-w-[670px] rounded-lg border border-black"
+              key={post.id}
+            >
               <Card
                 id={post.id}
                 img={post.img}

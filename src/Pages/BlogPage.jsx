@@ -65,7 +65,7 @@ const BlogPage = () => {
           <div className="w-[90vw] mx-auto">
             <div className="max-w-[770px border border-black rounded-lg">
               <Card
-                id={blog.id}
+                key={blog.id}
                 img={blog.img}
                 post={blog}
                 title={blog.title}
@@ -83,9 +83,11 @@ const BlogPage = () => {
               </h2>
               <div className="w-full flex flex-wrap justify-between gap-y-10">
                 {relatedblogs.map((post) => (
-                  <div className="max-w-[670px] mx-auto border hover: border-black rounded-lg">
+                  <div
+                    className="max-w-[670px] mx-auto border hover: border-black rounded-lg"
+                    key={post.id}
+                  >
                     <Card
-                      key={post.id}
                       id={post.id}
                       img={post.img}
                       post={post}
