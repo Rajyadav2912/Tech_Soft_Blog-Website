@@ -4,10 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Card = ({ id, title, author, date, category, content, tags, img }) => {
   return (
-    <div
-      key={id}
-      className="border border-black p-5 rounded-lg shadow-md shadow-gray-600"
-    >
+    <div key={id} className="p-5 rounded-lg shadow-md shadow-gray-600">
       <div className="flex items-center gap-5">
         <img src={img} alt="" className="rounded-full" />
         <div>

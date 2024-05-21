@@ -17,10 +17,10 @@ export const App = () => {
 
     if (location.pathname.includes("tags")) {
       // its mean to show our tags page
-      const tag = location.pathname.split("/").at(-1).replace("-", " ");
+      const tag = location.pathname.split("/").at(-1).replaceAll("-", " ");
       fetchBlogPosts(Number(page), tag);
     } else if (location.pathname.includes("categories")) {
-      const category = location.pathname.split("/").at(-1).replace("-", " ");
+      const category = location.pathname.split("/").at(-1).replaceAll("-", " ");
       fetchBlogPosts(Number(page), null, category);
     } else {
       fetchBlogPosts(Number(page));

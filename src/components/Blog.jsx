@@ -4,7 +4,7 @@ import { AppContext } from "../context/AppContext";
 import Spinner from "./Spinner";
 import Card from "./Card";
 
-const Blog = ({ margin }) => {
+const Blog = () => {
   // consume data
   const { posts, loading } = useContext(AppContext);
 
@@ -19,7 +19,7 @@ const Blog = ({ margin }) => {
       ) : (
         posts.map((post) => {
           return (
-            <div className="max-w-[670px]">
+            <div className="max-w-[670px] rounded-lg border border-black">
               <Card
                 id={post.id}
                 img={post.img}
