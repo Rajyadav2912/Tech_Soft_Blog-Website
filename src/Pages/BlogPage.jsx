@@ -42,7 +42,7 @@ const BlogPage = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-y-1">
       <Header />
       <div>
         <button onClick={() => navigation(-1)}>Back</button>
@@ -55,7 +55,7 @@ const BlogPage = () => {
         <div>
           <Card />
           <h2>Related Blog</h2>
-          
+
           {relatedblogs.map((post) => {
             <div key={post.id}>
               <Card

@@ -9,7 +9,7 @@ const Blog = ({ margin }) => {
   const { posts, loading } = useContext(AppContext);
 
   return (
-    <div className="w-11/12 py-4 flex flex-wrap gap-7 mt-16 justify-center items-center">
+    <div className="w-11/12 py-4 flex flex-wrap gap-7 mt-2 justify-center items-center">
       {loading ? (
         <Spinner />
       ) : posts.length === 0 ? (

@@ -12,14 +12,23 @@ const CategoryPage = () => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-y-1">
       <Header />
-      <div className=" w-[30%] flex justify-between mt-[5.5rem] px-5 border">
-        <button onClick={() => navigation(-1)}>Back</button>
-        <h2>
-          Blogs on #<span>{category}</span>
-        </h2>
+      <div className="my-[100px]">
+        <div className=" w-[45%] mx-auto flex items-center gap-x-4 px-5">
+          <button
+            onClick={() => navigation(-1)}
+            className="rounded-md border border-black shadow-lg shadow-gray-400  px-4 py-1"
+          >
+            Back
+          </button>
+          <h2 className="text-[20px] font-bold">
+            Blogs on <span className="text-blue-600 underline">{category}</span>
+          </h2>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <Blog />
+          <Pagination />
+        </div>
       </div>
-      <Blog margin={"mt-2"} />
-      <Pagination />
     </div>
   );
 };

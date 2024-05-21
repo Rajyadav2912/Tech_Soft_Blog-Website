@@ -15,9 +15,9 @@ const Card = ({ id, title, author, date, category, content, tags, img }) => {
             <p className="font-bold text-lg cursor-pointer">{title}</p>
           </NavLink>
           <p className="text-md">
-            📝 By <span className="italic mt-[4px]">{author}</span> on
+            📝 By <span className="italic mt-[4px]">{author}</span> on{" "}
             <NavLink to={`/categories/${category.replaceAll(" ", "-")}`}>
-              <span> {category}</span>
+              <span className="underline">{category}</span>
             </NavLink>
           </p>
           <p className="text-md mt-[4px]">
