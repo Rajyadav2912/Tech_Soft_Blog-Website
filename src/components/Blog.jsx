@@ -4,12 +4,12 @@ import { AppContext } from "../context/AppContext";
 import Spinner from "./Spinner";
 import Card from "./Card";
 
-const Blog = () => {
+const Blog = ({ margin }) => {
   // consume data
   const { posts, loading } = useContext(AppContext);
 
   return (
-    <div className="w-11/12 py-4 flex flex-wrap gap-7 my-16 justify-center items-center">
+    <div className="w-11/12 py-4 flex flex-wrap gap-7 mt-16 justify-center items-center">
       {loading ? (
         <Spinner />
       ) : posts.length === 0 ? (

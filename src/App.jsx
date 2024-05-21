@@ -16,6 +16,7 @@ export const App = () => {
     const page = searchParams.get("page") ?? 1;
 
     if (location.pathname.includes("tags")) {
+      // its mean to show our tags page
       const tag = location.pathname.split("/").at(-1).replace("-", " ");
       fetchBlogPosts(Number(page), tag);
     } else if (location.pathname.includes("categories")) {
