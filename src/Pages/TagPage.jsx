@@ -13,7 +13,7 @@ const TagPage = () => {
     <div className="w-full h-full flex flex-col items-center justify-center gap-y-1">
       <Header />
       <div className="my-[100px]">
-        <div className=" w-[60%] mx-auto flex items-center gap-x-4 px-5">
+        <div className=" sm:w-[60%] w-full mx-auto flex items-center gap-x-4 px-5">
           <button
             onClick={() => navigation(-1)}
             className="rounded-md border border-black shadow-lg shadow-gray-400  px-4 py-1"
